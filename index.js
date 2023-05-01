@@ -9,9 +9,9 @@ const authRoute = require('./routes/authroutes')
 const bookingRoute = require('./routes/bookingsRoutes')
 
 
-app.use(express.static("public"))
 dotenv.config()
 const app = express()
+app.use(express.static("public"))
 const port = process.env.PORT || 5000
 app.use(cors({
     credentials: true,
