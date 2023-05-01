@@ -15,7 +15,7 @@ app.use(express.static("public"))
 const port = process.env.PORT || 5000
 app.use(cors({
     credentials: true,
-    origin: "http://localhost:5174"
+    origin: "http://localhost:5173"
 }))
 app.use("*", (req, res) => {
 res.sendFile("public/index.html")
