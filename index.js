@@ -15,8 +15,11 @@ const app = express()
 const port = process.env.PORT || 5000
 app.use(cors({
     credentials: true,
-    origin: "http://localhost:5173"
+    origin: "http://localhost:5174"
 }))
+app.use("*", (req, res) => {
+res.sendFile("public/index.html")
+})
 
 
 mongoose.set('strictQuery', false)
