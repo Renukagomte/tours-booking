@@ -7,6 +7,7 @@ const tourRoute = require('./routes/toursRoutes')
 const userRoute = require('./routes/userRoutes')
 const authRoute = require('./routes/authroutes')
 const bookingRoute = require('./routes/bookingsRoutes')
+const path = require("path")
 
 
 dotenv.config()
@@ -18,7 +19,7 @@ app.use(cors({
     origin: "http://localhost:5173"
 }))
 app.use("*", (req, res) => {
-res.sendFile("public/index.html")
+    res.sendFile(path.join(__dirname, "/public/index.html"))
 })
 
 
