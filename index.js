@@ -16,7 +16,7 @@ app.use(express.static("public"))
 const port = process.env.PORT || 5000
 app.use(cors({
     credentials: true,
-    origin: "http://localhost:5173"
+    origin: "https://tours-booking-production.up.railway.app"
 }))
 app.use("*", (req, res) => {
     res.sendFile(path.join(__dirname, "/public/index.html"))
