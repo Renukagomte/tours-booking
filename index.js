@@ -17,10 +17,9 @@ const port = process.env.PORT || 5000
 app.use(cors({
     credentials: true,
     origin: "https://tours-booking-production.up.railway.app"
+    // origin: "http://localhost:5173"
 }))
-app.use("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "/public/index.html"))
-})
+
 
 
 mongoose.set('strictQuery', false)
@@ -47,7 +46,9 @@ app.use('/users', userRoute)
 app.use('/auth', authRoute)
 app.use('/booking', bookingRoute)
 
-
+app.use("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "/public/index.html"))
+})
 app.listen(port, () => {
     connect()
     console.log('server listening on port', port);
