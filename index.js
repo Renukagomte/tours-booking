@@ -17,7 +17,7 @@ const port = process.env.PORT || 5000
 app.use(cors({
     credentials: true,
     // origin: "https://tours-booking-production.up.railway.app"
-    origin: "https://tours-booking-pzl7.onrender.com/"
+    origin: "https://tours-booking-pk3y.onrender.com"
 }))
 
 
