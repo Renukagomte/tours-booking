@@ -15,7 +15,7 @@ const app = express()
 app.use(express.static("public"))
 const port = process.env.PORT || 5000
 app.use(cors({
-    origin: "https://tours-booking-d5as.onrender.com/",
+    origin: "https://tours-booking-d5as.onrender.com",
     // origin: "http://localhost:5173",
     credentials: true
 }))
