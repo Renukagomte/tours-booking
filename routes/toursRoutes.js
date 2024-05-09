@@ -7,13 +7,13 @@ const router = express.Router()
 
 router
   .post('/add-tour', createTour)
-  .put('/update/:tourId', updateTour)
-  .delete('/delete/:id', deleteTour)
-  .get('/:id', getSingleTour)
   .get('/', getAllTour)
   .get('/search/getTourBySearch', getTourBySearch)
   .get('/search/getFeaturedTour', getFeaturedTour)
   .get('/search/getTourCount', getTourCount)
   .delete('/', destroytour)
+  .put('/update/:tourId', updateTour)
+  .delete('/delete/:id', deleteTour)
+  .get('/:id', getSingleTour)
 
 module.exports = router
